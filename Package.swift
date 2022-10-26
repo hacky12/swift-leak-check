@@ -17,7 +17,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
 
-      .package(url: "https://github.com/apple/swift-syntax", .exact("0.50300.0")),      
+      .package(url: "https://github.com/apple/swift-syntax", .exact("0.50600.1")),
 
       // For Swift toolchain 5.2 and above
       // .package(name: "SwiftSyntax", url: "https://github.com/apple/swift-syntax", .exact("0.50300.0")),
@@ -35,7 +35,7 @@ let package = Package(
         .target(
           name: "SwiftLeakCheck",
           dependencies: [
-            "SwiftSyntax"
+            "SwiftSyntax", "SwiftSyntaxParser"
           ]
         ),
         .testTarget(
